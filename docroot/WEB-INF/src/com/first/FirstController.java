@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.bind.annotation.RenderMapping;
 
+import com.liferay.portal.kernel.util.ParamUtil;
+
 /**
  * Portlet implementation class FirstController
  */
@@ -20,6 +22,7 @@ public class FirstController{
 			RenderRequest request,
 			RenderResponse response,
 			Model model){
+		System.out.println(ParamUtil.getString(request, "test"));
 		return "view";
 	}
 
